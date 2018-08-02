@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>径向渐变</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script>
+      let canvas = document.querySelector("canvas");
+      let ctx = canvas.getContext("2d");
+      let rgd = ctx.createRadialGradient(125,125,10,125,125,70);
+      rgd.addColorStop(0,"red");
+      rgd.addColorStop(1,"blue");
+      ctx.fillStyle = rgd;
+      ctx.moveTo(50,50);
+      ctx.lineTo(50,200);
+      ctx.lineTo(200,200);
+      ctx.lineTo(200,50);
+      ctx.closePath();
+      ctx.fill();
+    </script>
+  </body>
+</html>

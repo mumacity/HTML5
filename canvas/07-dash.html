@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>绘制虚线</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script>
+      let canvas = document.querySelector("canvas");
+      let ctx = canvas.getContext("2d");
+      ctx.moveTo(50,50);
+      ctx.lineTo(250,50);
+      ctx.setLineDash([5,5]);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(50,150);
+      ctx.lineTo(250,150);
+      ctx.setLineDash([10,5]);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(50,200);
+      ctx.lineTo(250,200);
+      ctx.setLineDash([10,5,10]);
+      ctx.stroke();
+    </script>
+  </body>
+</html>

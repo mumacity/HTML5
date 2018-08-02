@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>箭头</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <script>
+      let canvas = document.querySelector("canvas");
+      let ctx = canvas.getContext("2d");
+
+      ctx.moveTo(200,200);
+      ctx.lineTo(400,200);
+      ctx.lineTo(400,400);
+      ctx.lineTo(200,400);
+      ctx.closePath();
+
+      ctx.moveTo(300,250);
+      ctx.lineTo(250,300);
+      ctx.lineTo(275,300);
+      ctx.lineTo(275,350);
+      ctx.lineTo(325,350);
+      ctx.lineTo(325,300);
+      ctx.lineTo(350,300);
+      ctx.closePath();
+      ctx.fillStyle = "red";
+      ctx.fill();
+    </script>
+  </body>
+</html>

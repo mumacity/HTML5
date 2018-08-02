@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文件读取</title>
+  </head>
+  <body>
+    <input type="file"/>
+    <script type="text/javascript">
+      let oInput = document.querySelector("input");
+      oInput.onchange = function(){
+        //获取文件
+        let file = this.files[0];
+        //创建读取器
+        let reader = new FileReader();
+        //开始读取
+        reader.readAsText(file);
+        reader.onload = function(){
+          console.log(reader.result);
+        }
+      }
+    </script>
+
+  </body>
+</html>
